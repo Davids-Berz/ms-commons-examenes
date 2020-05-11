@@ -40,6 +40,9 @@ public class Examen {
     @NotNull
     private Asignatura asignatura;
 
+    @Transient
+    private boolean respondido;
+
     @PrePersist
     public void prePersist(){
         this.createAt = new Date();
